@@ -11,7 +11,10 @@
       
     - name: Install JDK 8
       yum: pkg='java-1.8.0-openjdk' state=installed
+    
+    - name: Creating a Directory for sql
+      file: path=/opt/my-sql state=directory
       
-    - name: Install MySQL
-      yum: pkg='mysql-community-server' state=installed
+      
+ 
       
