@@ -13,7 +13,7 @@
       yum: pkg='java-1.8.0-openjdk' state=installed
       
     - name: Download psql rpm
-      yum: pkg='https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm' state=installed
+      yum: pkg='https://yum.postgresql.org/testing/11/redhat/rhel-8-x86_64/' state=installed
 
     - name: Install
       yum: pkg='postgresql11-server' state=installed
