@@ -17,8 +17,7 @@
       
     - name: Downloading SQL
       get_url: url=https://yum.postgresql.org/testing/13/redhat/rhel-8-x86_64/ dest=/opt/my-sql mode='1777'
-    
-    - name: Install SQL
+
     
     
 
