@@ -19,9 +19,12 @@
       file: path=/opt/my-sql state=directory
       
     - name: Downloading SQL
-      wget: 
-         https://repo.mysql.com/mysql80-community-release-el7-1.noarch.rpm
-      
+      get_url: url=https://repo.mysql.com/mysql80-community-release-el7-1.noarch.rpm dest=/opt/my-sql mode='1777'
+    
+    - name: Change Dict
+      shell: 
+       chdir: /opt/my-sql
+       
     - name: Installin the link
       rpm: mysql80-community-release-el7-1.noarch.rpm
       
