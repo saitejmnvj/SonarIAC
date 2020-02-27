@@ -17,14 +17,9 @@
     
     - name: Creating a Directory for sql
       file: path=/opt/my-sql state=directory
-   
-    - name: Change Dict
-      shell:
-       cmd: ls
-       chdir: /opt/my-sql
       
     - name: Downloading SQL
-      get_url: url=https://yum.postgresql.org/testing/13/redhat/rhel-8-x86_64/ mode='1777'
+      get_url: url=https://yum.postgresql.org/testing/13/redhat/rhel-8-x86_64/ dst=/opt/my-sql mode='1777'
     
 
        
