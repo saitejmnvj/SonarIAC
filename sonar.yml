@@ -15,6 +15,12 @@
     - name: Creating a Directory for sql
       file: path=/opt/my-sql state=directory
       
+    - name: Downloading SQL
+      wget: https://repo.mysql.com/mysql80-community-release-el7-1.noarch.rpm
+      
+    - name: Installin the link
+      yum: mysql80-community-release-el7-1.noarch.rpm
+      
       
  
       
