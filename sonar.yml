@@ -16,7 +16,7 @@
       file: path=/opt/my-sql state=directory
 
     - name: Install
-      yum: pkg='postgresql' state= installed
+      yum: pkg='postgresql' state=installed
     
     - name: start Service
       service: name=postgresql state=started
