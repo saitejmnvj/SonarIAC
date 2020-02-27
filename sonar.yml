@@ -15,8 +15,13 @@
     - name: Creating a Directory for sql
       file: path=/opt/my-sql state=directory
       
-    - name: Downloading SQL
-      get_url: url=https://yum.postgresql.org/testing/13/redhat/rhel-8-x86_64/ dest=/opt/my-sql mode='1777'
+    #- name: Downloading SQL
+     # get_url: url=https://yum.postgresql.org/testing/13/redhat/rhel-8-x86_64/ dest=/opt/my-sql mode='1777'
+    - name: Install
+      yum: pkg='postgresql' state= installed
+    
+    - name: start Service
+      service: name=postgresql state=started
 
     
     
