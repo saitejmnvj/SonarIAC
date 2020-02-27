@@ -13,5 +13,5 @@
       yum: pkg='java-1.8.0-openjdk' state=installed
       
     - name: Install MySQL
-      yum: pkg='mysql-server' state=installed
+      yum: pkg='mysql-community-server' state=installed
       
