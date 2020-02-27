@@ -11,15 +11,22 @@
       
     - name: Install JDK 8
       yum: pkg='java-1.8.0-openjdk' state=installed
-    
-    - name: Creating a Directory for sql
-      file: path=/opt/my-sql state=directory
+      
+    - name: Download psql rpm
+      yum: pkg='https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm' state=installed
 
     - name: Install
-      yum: pkg='postgresql' state=installed
+      yum: pkg='postgresql11-server' state=installed
+      
+    - name: Init
+      shell:
+        cmd: /usr/pgsql-11/bin/postgresql-11-setup initdb
     
     - name: start Service
-      service: name=postgresql state=started
+      service: name=postgresql-11 state=started
+      
+    - name: start Service
+      service: name=postgresql-11 state=enabled
 
     
     
