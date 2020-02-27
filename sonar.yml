@@ -10,7 +10,7 @@
       yum: pkg='wget' state=installed
       
     - name: Install JDK 8
-      yum: pkg='openjdk-8-jdk' state=installed
+      yum: pkg='java-1.8.0-openjdk' state=installed
       
     - name: Install MySQL
       yum: pkg='mysql-server' state=installed
