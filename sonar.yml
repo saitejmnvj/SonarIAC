@@ -9,3 +9,9 @@
     - name: Install wget
       apt: pkg='wget' state=installed
       
+    - name: Install JDK 8
+      apt: pkg='openjdk-8-jdk' state=installed
+      
+    - name: Install MySQL
+      apt: pkg='mysql-server' state=installed
+      
