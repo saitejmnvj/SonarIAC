@@ -8,6 +8,9 @@
     
     - name: Install wget
       yum: pkg='wget' state=installed
+    
+    - name: Install rpm
+      yum: pkg='rpm' state=installed
       
     - name: Install JDK 8
       yum: pkg='java-1.8.0-openjdk' state=installed
