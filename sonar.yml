@@ -1,5 +1,5 @@
 ---
- - hosts: sonar
+ - hosts: node1
    become: true
    tasks: 
     - name: Updating apt
