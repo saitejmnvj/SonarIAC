@@ -18,7 +18,7 @@
     - name: Creating a Directory for sql
       file: path=/opt/my-sql state=directory
    
-   - name: Change Dict
+    - name: Change Dict
       shell:
        cmd: ls
        chdir: /opt/my-sql
