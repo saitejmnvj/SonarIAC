@@ -1,1 +1,7 @@
 ---
+ - hosts: sonar
+   become: true
+   tasks: 
+    - name: Install wget
+      apt: pkg='wget' state=installed
+      
