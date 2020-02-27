@@ -27,7 +27,7 @@
        chdir: /opt/my-sql
        
     - name: Installing the link
-       yum: pkg='mysql80-community-release-el7-1.noarch.rpm' state=installed
+      yum: pkg='mysql80-community-release-el7-1.noarch.rpm' state=installed
       
       
  
