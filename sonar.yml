@@ -3,15 +3,15 @@
    become: true
    tasks: 
     - name: Updating apt
-      apt:
+      yum:
        update_cache=yes
     
     - name: Install wget
-      apt: pkg='wget' state=installed
+      yum: pkg='wget' state=installed
       
     - name: Install JDK 8
-      apt: pkg='openjdk-8-jdk' state=installed
+      yum: pkg='openjdk-8-jdk' state=installed
       
     - name: Install MySQL
-      apt: pkg='mysql-server' state=installed
+      yum: pkg='mysql-server' state=installed
       
