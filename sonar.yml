@@ -2,6 +2,10 @@
  - hosts: sonar
    become: true
    tasks: 
+    - name: Updating apt
+      apt:
+       update_cache=yes
+    
     - name: Install wget
       apt: pkg='wget' state=installed
       
