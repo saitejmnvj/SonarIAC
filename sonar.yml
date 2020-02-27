@@ -8,9 +8,6 @@
     
     - name: Install wget
       yum: pkg='wget' state=installed
-    
-    - name: Install rpm
-      yum: pkg='rpm' state=installed
       
     - name: Install JDK 8
       yum: pkg='java-1.8.0-openjdk' state=installed
@@ -19,7 +16,7 @@
       file: path=/opt/my-sql state=directory
       
     - name: Downloading SQL
-      get_url: url=https://yum.postgresql.org/testing/13/redhat/rhel-8-x86_64/ dst=/opt/my-sql mode='1777'
+      get_url: url=https://yum.postgresql.org/testing/13/redhat/rhel-8-x86_64/ dest=/opt/my-sql mode='1777'
     
 
        
