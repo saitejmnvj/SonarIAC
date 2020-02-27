@@ -20,7 +20,7 @@
       
     - name: Downloading SQL
       wget: 
-      https://repo.mysql.com/mysql80-community-release-el7-1.noarch.rpm
+         https://repo.mysql.com/mysql80-community-release-el7-1.noarch.rpm
       
     - name: Installin the link
       rpm: mysql80-community-release-el7-1.noarch.rpm
