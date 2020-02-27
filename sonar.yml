@@ -22,7 +22,8 @@
       get_url: url=https://repo.mysql.com/mysql80-community-release-el7-1.noarch.rpm dest=/opt/my-sql mode='1777'
     
     - name: Change Dict
-      shell: 
+      shell:
+       cmd: ls
        chdir: /opt/my-sql
        
     - name: Installing the link
